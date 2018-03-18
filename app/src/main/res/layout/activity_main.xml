@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jason12.votingapp.MainActivity">
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Enter your details"
+        android:textSize="30sp"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/e1"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/t1"
+        android:maxLength="10"
+        android:hint="Name"
+        android:inputType="text"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/e2"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:maxLength="7"
+        android:inputType="number"
+        android:hint="PID"
+        android:layout_below="@+id/e1"
+        android:layout_alignStart="@+id/e1" />
+
+    <EditText
+        android:id="@+id/e3"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/e2"
+        android:maxLength="4"
+        android:hint="Class"
+        android:layout_centerHorizontal="true" />
+
+    <AutoCompleteTextView
+        android:id="@+id/e4"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/e3"
+        android:maxLength="1"
+        android:hint="DIV"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Submit"
+        android:textSize="20sp"
+        android:layout_below="@+id/e4"
+        android:layout_alignStart="@+id/t1" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/b1"
+        android:layout_alignBottom="@+id/b1"
+        android:layout_alignEnd="@+id/t1" />
+
+
+
+</RelativeLayout>
