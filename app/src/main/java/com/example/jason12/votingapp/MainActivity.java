@@ -48,7 +48,7 @@ public class MainActivity extends ActionBarActivity {
                 else {
                     pass = random.nextInt(10000);
                     pid = Integer.parseInt(e2.getText().toString());
-                    Toast.makeText(MainActivity.this, "Your Password is: " + pass, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Your Password is: " + pass, Toast.LENGTH_LONG).show();
                     boolean input = db.insertData(name, pid, pass, Class, div);
                     if(input == true){
                         Toast.makeText(MainActivity.this, "INSERTED", Toast.LENGTH_SHORT).show();

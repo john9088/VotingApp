@@ -41,7 +41,6 @@ public class Login extends Activity {
             public void onClick(View v) {
                 Intent admin = new Intent(Login.this, admin.class);
                 startActivity(admin);
-
             }
         });
 
@@ -50,22 +49,28 @@ public class Login extends Activity {
             public void onClick(View v) {
                 String id = e1.getText().toString();
                 String pass = e2.getText().toString();
+                boolean flag = false;
                 Cursor res = db.getdata();
                 if (res.getCount() == 0)
                     Toast.makeText(Login.this, "EMPTY", Toast.LENGTH_SHORT).show();
                 else {
-
                     while (res.moveToNext()) {
                         if (id.equals(res.getString(1)) && pass.equals(res.getString(2))) {
+                            flag = true;
                             Bundle b = new Bundle();
                             b.putString("PID",id);
                             Intent vote = new Intent(Login.this,Vote.class);
                             vote.putExtras(b);
                             startActivity(vote);
                             finish();
-                        } else
-                            Toast.makeText(Login.this, "ERROR...", Toast.LENGTH_SHORT).show();
+                            break;
+                        }else
+                            flag = false;
                     }
+                    if(flag == true)
+                        Toast.makeText(Login.this, "SUCCESS...", Toast.LENGTH_SHORT).show();
+                    else
+                        Toast.makeText(Login.this, "Wrong Password or ID", Toast.LENGTH_SHORT).show();
                 }
 
 

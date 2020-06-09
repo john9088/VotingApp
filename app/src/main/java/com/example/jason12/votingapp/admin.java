@@ -47,10 +47,11 @@ public class admin extends AppCompatActivity {
                         buff.append("Div: "+ res.getString(4)+"\n\n");
                         buff.append("Vote: "+ res.getString(5)+"\n\n");
                     }
-
                     //show data
                     message("DATA",buff.toString());
-
+                }
+                else{
+                    Toast.makeText(admin.this, "Wrong Credential Entered", Toast.LENGTH_SHORT).show();
                 }
             }
         });

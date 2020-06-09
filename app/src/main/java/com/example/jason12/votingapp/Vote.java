@@ -52,7 +52,7 @@ public class Vote extends AppCompatActivity {
 
                 switch(checkedId){
                     case R.id.rb1:
-                        vote = Integer.parseInt(b1.getText().toString());
+                        vote = Integer.parseInt(rb1.getText().toString());
                         break;
                     case R.id.rb2:
                         vote = Integer.parseInt(rb2.getText().toString());
@@ -99,6 +99,14 @@ public class Vote extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Vote.this);
                 builder.setMessage("Are you sure about your vote?").setPositiveButton("Yes", dialogClickListener)
                         .setNegativeButton("No", dialogClickListener).show();
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent login = new Intent(Vote.this, Login.class);
+                startActivity(login);
             }
         });
 
