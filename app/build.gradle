@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '25.0.3'
+    defaultConfig {
+        applicationId "com.example.jason12.votingapp"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+allprojects {
+
+    repositories {
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven { url "https://maven.google.com" }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+    //implementation 'com.android.support:appcompat-v7:+'
+    //implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    compile 'com.android.support:appcompat-v7:25.+'
+    compile 'com.android.support:design:25.+'
+    testCompile 'junit:junit:4.12'
+    //testImplementation 'junit:junit:4.13'
+}
