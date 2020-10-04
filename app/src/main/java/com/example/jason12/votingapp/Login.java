@@ -70,7 +70,11 @@ public class Login extends Activity {
                     if(flag == true)
                         Toast.makeText(Login.this, "SUCCESS...", Toast.LENGTH_SHORT).show();
                     else
+<<<<<<< HEAD
                         Toast.makeText(Login.this, "Wrong Password or ID.", Toast.LENGTH_SHORT).show();
+=======
+                        Toast.makeText(Login.this, "Wrong Password or ID", Toast.LENGTH_SHORT).show();
+>>>>>>> d59fedd441fb0bf72ef38cba38a5f3f202b657ca
                 }
 
 
